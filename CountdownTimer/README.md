@@ -6,7 +6,7 @@ This project is a countdown timer implemented using HTML, CSS, and JavaScript. T
 
 ## Demo
 
-Explore the live demo of the countdown timer [here]().
+Explore the live demo of the countdown timer [here](https://countdown-timer-liard-ten.vercel.app/).
 
 ## Features
 
