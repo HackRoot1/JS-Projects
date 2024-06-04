@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #countdown {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="countdown">00:00:00</div>
+    <input type="time" id="time">
+    <button onclick="startCountdown()">Start Countdown</button>
+
+    <script>
+
+        
+        function timeToSeconds(time) {
+            const [hours, minutes] = time.split(':').map(Number);
+            const [minute, timeZone] = time.split(' ').map(minutes);
+            return (hours * 3600) + (minute * 60);
+        }
+        
+        let timeString = document.getElementById("time").value;
+
+        // Example usage:
+        // const timeString = '18:23';
+        const totalSeconds = timeToSeconds(timeString);
+        console.log(`Total seconds for ${timeString}: ${totalSeconds}`);
+
+
+
+        let timer;
+        let timeInSeconds = 300; // 5 minutes
+        
+        function startCountdown() {
+            if (!timer) {
+                timer = setInterval(updateCountdown, 1000);
+            }
+        }
+
+        function updateCountdown() {
+            const minutes = Math.floor(timeInSeconds / 60);
+            const seconds = timeInSeconds % 60;
+
+            document.getElementById('countdown').innerText = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+            if (timeInSeconds > 0) {
+                timeInSeconds--;
+            } else {
+                clearInterval(timer);
+                timer = null;
+                alert("Countdown finished!");
+            }
+        }
+    </script>
+
+</body>
+</html>
