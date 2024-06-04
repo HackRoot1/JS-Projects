@@ -34,16 +34,20 @@
         
         function timeToSeconds(time) {
             const [hours, minutes] = time.split(':').map(Number);
-            const [minute, timeZone] = time.split(' ').map(minutes);
+            // const [minute, timeZone] = time.split(' ').map(minutes);
+            const [minute] = time.split(':').map(Number);
             return (hours * 3600) + (minute * 60);
         }
         
-        let timeString = document.getElementById("time").value;
-
-        // Example usage:
-        // const timeString = '18:23';
-        const totalSeconds = timeToSeconds(timeString);
-        console.log(`Total seconds for ${timeString}: ${totalSeconds}`);
+        
+        document.getElementById("time").addEventListener("change", function() {
+            let timeString = this.value;
+            console.log(timeString);
+            // Example usage:
+            // const timeString = '18:23';
+            const totalSeconds = timeToSeconds(timeString);
+            console.log(`Total seconds for ${timeString}: ${totalSeconds}`);
+        })
 
 
 

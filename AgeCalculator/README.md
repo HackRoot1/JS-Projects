@@ -39,8 +39,8 @@ Check out the hosted version of the age calculator [here](https://age-calculator
 To run this project locally, simply clone the repository and open the `index.html` file in a web browser.
 
 ```bash
-git clone https://github.com/your-username/age-calculator-project.git
-cd age-calculator-project
+git clone https://github.com/HackRoot1/JS-Projects.git
+cd AgeCalculator
 ```
 
 ## Contributing

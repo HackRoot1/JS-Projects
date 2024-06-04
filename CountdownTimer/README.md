@@ -40,8 +40,8 @@ Explore the live demo of the countdown timer [here](https://countdown-timer-liar
 To run this project locally, clone the repository and open the `index.html` file in a web browser.
 
 ```bash
-git clone https://github.com/your-username/countdown-timer-project.git
-cd countdown-timer-project
+git clone clone https://github.com/HackRoot1/JS-Projects.git
+cd CountdownTimer
 ```
 
 ## Contributing
