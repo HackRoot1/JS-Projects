@@ -1,6 +1,8 @@
 // Function to calculate age
-function calculateAge() {
-    var dob = document.getElementById('age-cal-form').value;
+function calculateAge(e) {
+    
+    e.preventDefault();
+    var dob = document.getElementById('birth-date-value').value;
     var dobDate = new Date(dob);
 
     var today = new Date();
@@ -27,4 +29,8 @@ function calculateAge() {
 }
 
 // Event listener for form submission
-document.getElementById('age-cal-form').addEventListener('change', calculateAge);
+document.getElementById('age-cal-form').addEventListener('submit', calculateAge);
+
+document.getElementById('reset-display').addEventListener('click', function() {
+    document.getElementById("result").innerHTML = "";
+});

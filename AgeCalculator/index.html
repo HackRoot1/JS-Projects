@@ -9,8 +9,14 @@
 <body>
 
     <div class="container">
-        <form>
-            <input type="date" id="age-cal-form" placeholder="Enter Your Age">
+        <form id="age-cal-form">
+            <div>
+                <input type="date" id = "birth-date-value" placeholder="Enter Your Age">
+            </div>
+            <div>
+                <input type="reset" id = "reset-display" value="Reset">
+                <input type="submit" value="Calculate Age">
+            </div>
         </form>
         
         <div id ="result"></div>
